@@ -50,7 +50,7 @@ matlab/jsgd_train.mex: matlab/jsgd_train.c c/jsgd.o c/x_matrix.o
 # Python.h and numpy/arrayobject.h should be accessible:
 
 #PYTHONINCLUDES=-I/usr/include/python2.7
-PYTHONINCLUDES=-I/datastore/zhenyang/local/sage-current/local/include/python2.7
+PYTHONINCLUDES=-I/datastore/zhenyang/local/sage-current/local/include/python2.7 -I/datastore/zhenyang/local/sage-current/local/lib/python2.7/site-packages/numpy/core/include
 
 # also produces python/jsgd_wrap.py
 python/jsgd_wrap_wrap.c: python/jsgd_wrap.swg c/jsgd.h c/x_matrix.h
