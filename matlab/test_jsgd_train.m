@@ -1,7 +1,7 @@
-addpath('../yael/matlab')
+addpath('/datastore/zhenyang/Workspace/devel/matlab/toolbox/yael/matlab')
 
-basename = '../example_data/groupFungus_k64_nclass10_nex10'
-%basename = '../example_data/groupFungus_k64_nclass134_nex50' %This dataset can take more than an hour to run.
+%basename = '../example_data/groupFungus_k64_nclass10_nex10'
+basename = '../example_data/groupFungus_k64_nclass134_nex50' %This dataset can take more than an hour to run.
 
 % load train data
 Xtrain = fvecs_read([basename '_Xtrain.fvecs']);
@@ -19,7 +19,7 @@ perm = randperm(n);
 Xtrain = Xtrain(:, perm); 
 Ltrain = Ltrain(perm);
 
-n_epoch = 60; 
+n_epoch = 200; %60; 
 
 
 % example with default parameters of OVR
@@ -34,7 +34,7 @@ n_epoch = 60;
                        'n_thread', 1);
 
 % with other algorithms below...
-if 0
+if 1
 
   
 [W,stats_mul] = jsgd_train(single(Xtrain), int32(Ltrain), ...
