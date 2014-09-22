@@ -116,7 +116,7 @@ typedef struct {
 
 
 /* fill in decent default params (OVR) */
-void jsgd_params_set_default(jsgd_params_t *params); 
+void jsgd_params_set_default(jsgd_params_t *params);
 
 /* Uses SGD to learn a classifier
  * labels should be in 0:nclass-1
