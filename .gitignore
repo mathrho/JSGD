@@ -1,4 +1,5 @@
 # exclude everything u want
 
-./example_data
-./DS_Store
+example_data/
+.DS_store
+DS_Store/
